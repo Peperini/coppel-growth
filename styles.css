@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    /* width: 100vw; */
+    font-family: Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #333;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 5rem;
+    line-height: 145%;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-family: Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000;
+    font-size: 5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header p {
+    margin: 5rem auto;
+    text-align: left;
+    width: 45%;
+    min-width: 500px;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #fdda24;
+    text-decoration: underline;
+}
+
+.observablehq {
+    text-align: center;
+}
+
+.observablehq form {
+    justify-content: center;
+}
+
+.observablehq form button {
+    /* font-size: 1.5rem; */
+}
+
+.observablehq form output {
+    color: #999;
+    width: 150px;
+    font-size: 1.5rem;
+}
+
+.observablehq:not(.observablehq:first-of-type, .observablehq:nth-of-type(3)) {
+    display: none;
+}
