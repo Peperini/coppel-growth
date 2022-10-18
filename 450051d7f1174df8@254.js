@@ -117,9 +117,9 @@ function Scrubber(values, {
 } = {}) {
   values = Array.from(values);
   const form = html`<form style="font: 12px var(--sans-serif); font-variant-numeric: tabular-nums; display: flex; height: 33px; align-items: center;">
-  <button name=b type=button style="margin-right: 0.4em; width: 5em;"></button>
+  <button name=b type=button style="margin-right: 1em; width: 8em;"></button>
   <label style="display: flex; align-items: center; text-align: left;">
-    <input name=i type=range min=0 max=${values.length - 1} value=${initial} step=1 style="width: 180px;">
+    <input name=i type=range min=0 max=${values.length - 1} value=${initial} step=1 style="width: 280px;">
     <output name=o style="margin-left: 1em;"></output>
   </label>
 </form>`;
