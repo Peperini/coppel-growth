@@ -1,4 +1,4 @@
-import define1 from "./450051d7f1174df8@254.js";
+import define1 from "./scrubber.js";
 
 function _1(md){return(
 md`# Crecimiento Coppel
@@ -27,18 +27,23 @@ function _chart(d3,DOM,topojson,mx,data)
 
   svg.append('path')
       .datum(topojson.feature(mx, mx.objects.MEX_adm1))
-      .attr('fill', d=> '#ddd')
+      .attr('fill', d => '#ddd')
       .attr("stroke", "white")
       .attr("d", path);
 
   const g = svg.append("g")
-      .attr("fill", "none")
-      .attr("stroke", "black");
+      .attr("fill", "none");
+      // .attr("stroke", "black");
 
   const dot = g.selectAll("circle")
     .data(data)
     .join("circle")
-      .attr("transform", d => `translate(${d})`);
+      .attr("transform", d => `translate(${d})`)
+      .attr("stroke", d => {
+        return "TIENDA COPPEL" == d.formato ? "blue" : 
+        "ZAPATERIA" == d.formato ? "red" : 
+        "FASHION MARKET" == d.formato ? "green" : "black";
+      });
 
   svg.append("circle")
       .attr("fill", "blue")
@@ -63,7 +68,7 @@ function _chart(d3,DOM,topojson,mx,data)
 
 
 function _update(chart,date){return(
-chart.update(date)
+  chart.update(date)
 )}
 
 async function _data(FileAttachment,projection,parseDate){return(
@@ -71,6 +76,7 @@ async function _data(FileAttachment,projection,parseDate){return(
   .map(d => {
     const p = projection(d);
     p.date = parseDate(d.date);
+    p.formato = d.formato;
     return p;
   })
   .sort((a, b) => a.date - b.date)
@@ -104,7 +110,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["coppel-tsv-v2.tsv", {url: new URL("./files/56e2713a5a9a75945a103fc138c1bf3127ce323aaecab3b58f4353527411a25f06478e86e156184bcf0bf3221026ec698cf64986fb34dc194f7efe42df92e841.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
+    ["coppel-tsv-v2.tsv", {url: new URL("./files/coppel-tsv-v2.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   // main.variable(observer()).define(["md"], _1);
