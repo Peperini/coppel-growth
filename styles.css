@@ -5,22 +5,33 @@
 }
 
 html {
+    height: 100vh;
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    /* width: 100vw; */
+    height: 600vh;
+/*    overflow: hidden;*/
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     color: #333;
     background-color: #fff;
-    margin: 0 auto;
-    padding: 5rem;
     line-height: 145%;
 }
 
-header {
+.container {
+    position: fixed;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
     width: 100%;
     margin: 0 auto;
 }
@@ -32,10 +43,14 @@ header {
     font-weight: 600;
     text-align: center;
     letter-spacing: 0.1rem;
+    line-height: 115%;
+    width: 50%;
+    min-width: 500px;
+    margin: 4rem auto 0 auto;
 }
 
 .header p {
-    margin: 5rem auto;
+    margin: 4rem auto 0 auto;
     text-align: left;
     width: 45%;
     min-width: 500px;
@@ -79,4 +94,8 @@ a:hover {
 
 .observablehq:not(.observablehq:first-of-type, .observablehq:nth-of-type(3)) {
     display: none;
+}
+
+.chart-svg {
+    margin: 5rem auto;
 }
