@@ -8,52 +8,48 @@ html {
     height: 100vh;
     font-size: 62.5%;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
     height: 600vh;
-/*    overflow: hidden;*/
     font-family: 'Lato', sans-serif;
     font-size: 2rem;
     color: #333;
     background-color: #fff;
     line-height: 145%;
+
 }
 
 .container {
     position: fixed;
-    max-width: 100vw;
-    max-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 4rem;
 }
 
 .header {
-    width: 100%;
-    margin: 0 auto;
+    width: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .header h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', 'Roboto', sans-serif;
     color: #000;
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: normal;
     text-align: center;
-    letter-spacing: 0.1rem;
-    line-height: 115%;
-    width: 50%;
-    min-width: 500px;
-    margin: 4rem auto 0 auto;
+    line-height: 95%;
 }
 
 .header p {
-    margin: 4rem auto 0 auto;
-    text-align: left;
-    width: 45%;
-    min-width: 500px;
+
 }
 
 a {
@@ -63,39 +59,4 @@ a {
 a:hover {
     color: #fdda24;
     text-decoration: underline;
-}
-
-.observablehq {
-    text-align: center;
-}
-
-.observablehq form {
-    justify-content: center;
-}
-
-.observablehq form button {
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem 0;
-    border: 1px solid #999;
-    border-radius: 15px;
-    color: #000;
-    background-color: #f0f0f0;
-}
-
-.observablehq form output {
-    color: #999;
-    width: 150px;
-}
-
-.observablehq form input {
-    cursor: pointer;
-}
-
-.observablehq:not(.observablehq:first-of-type, .observablehq:nth-of-type(3)) {
-    display: none;
-}
-
-.chart-svg {
-    margin: 5rem auto;
 }

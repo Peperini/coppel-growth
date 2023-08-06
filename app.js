@@ -20,16 +20,16 @@ async function chart(data) {
         .attr("stroke", "white")
         .attr("d", path);
     });
-
     const g = svg.append("g")
         .attr("fill", "none")
         .attr("stroke", "black");
 
-    const dot = g.selectAll("circle");
+    let dot;
 
-    data.then(function(data) {
-            dot.data(data)
-            .join("circle")
+    data.then((data) => {
+        dot = g.selectAll("circle")
+                .data(data)
+                .join("circle")
                 .attr("transform", d => `translate(${d})`);
 
             svg.append("circle")
@@ -42,10 +42,10 @@ async function chart(data) {
 
     return Object.assign(svg.node(), {
         update(date) {
-            dot.filter(d => d.date > previousDate && d.date <= date)
-                .transition().attr("r", 3);
-            dot.filter(d => d.date <= previousDate && d.date > date)
-                .transition().attr("r", 0);
+            console.log(dot)
+            dot.filter(d => d.date > previousDate && d.date <= date).transition().attr("r", 3);
+            dot.filter(d => d.date <= previousDate && d.date > date).transition().attr("r", 0);
+
             previousDate = date;
         }
     });
@@ -53,14 +53,12 @@ async function chart(data) {
 
 async function data(projection, parseDate) {
     return (
-        (await d3.tsv("./data/coppel-tsv-v2.tsv"))
-            .map(d => {
-                const p = projection(d);
-                p.date = parseDate(d.date);
-                p.formato = d.formato;
-                return p;
-            })
-            .sort((a, b) => a.date - b.date)
+        (await d3.tsv("./data/coppel-tsv-v2.tsv")).map(d => {
+            const p = projection(d);
+            p.date = parseDate(d.date);
+            p.formato = d.formato;
+            return p;
+        }).sort((a, b) => a.date - b.date)
     )
 }
 
@@ -88,7 +86,6 @@ pData.then(d => {
 
         map.then(map => {
             map.update(date[dateIndex]);
-            console.log(date[dateIndex])
         });
     });
 });
