@@ -2,6 +2,9 @@
 
 <!-- [![Website Preview](preview.png)](https://your-website-url.com) -->
 
+Interactive data visualization map that shows the expansion of Coppel retail stores over the last 60 years.
+On January 1, 1956 in Culiacan, Sinaloa, the first Coppel store opened.
+
 This repository contains the source code for an interactive and visually engaging data visualization project. By analyzing store opening data from Coppel, a prominent retailer and leading e-commerce company in Mexico, I aim to create a comprehensive exploration of this data and delve into the rich history of Coppel Group.
 
 ## Demo
@@ -12,7 +15,7 @@ Check out the live demo of the project: WIP<!-- [Demo Link](https://your-website
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/JoseArmandoFelix/crecimiento-coppel.git`
+1. Clone the repository: `git clone https://github.com/Peperini/coppel-growth.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
