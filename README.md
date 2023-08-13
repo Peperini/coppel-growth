@@ -1,4 +1,4 @@
-# Crecimiento Coppel en México
+# Coppel Growth in México
 
 <!-- [![Website Preview](preview.png)](https://your-website-url.com) -->
 
@@ -15,7 +15,7 @@ Check out the live demo of the project: WIP<!-- [Demo Link](https://your-website
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/Peperini/coppel-growth.git`
+1. Clone the repository: `git clone https://github.com/peperini/coppel-growth.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
