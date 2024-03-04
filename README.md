@@ -7,9 +7,11 @@ On January 1, 1956 in Culiacan, Sinaloa, the first Coppel store opened.
 
 This repository contains the source code for an interactive and visually engaging data visualization project. By analyzing store opening data from Coppel, a prominent retailer and leading e-commerce company in Mexico, I aim to create a comprehensive exploration of this data and delve into the rich history of Coppel Group.
 
+https://github.com/peperini/coppel-growth/assets/42049554/54e64283-2924-4568-9662-5abf96a0eba9
+
 ## Demo
 
-Check out the live demo of the project: WIP<!-- [Demo Link](https://your-website-url.com) -->
+TBD
 
 ## Installation
 
